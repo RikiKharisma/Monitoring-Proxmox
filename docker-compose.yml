@@ -1,0 +1,17 @@
+services:
+  proxmox-down-monitor:
+    build: .
+    container_name: proxmox-down-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./servers.json:/app/servers.json:ro
+      - ./ssh:/app/ssh:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
