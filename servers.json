@@ -13,6 +13,6 @@
     "url": "https://192.168.100.2:8006",
     "tokenId": "root@pam!pc",
     "tokenSecret": "",
-    "backupStorage": "local"
+    "backupStorage": "HDD-1TB"
   }
 ]

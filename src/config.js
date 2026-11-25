@@ -46,6 +46,7 @@ module.exports = {
     minute: num(env.BACKUP_MINUTE, 0),
     mode: env.BACKUP_MODE || 'snapshot', // snapshot | suspend | stop
     compress: env.BACKUP_COMPRESS || 'zstd', // 0 | gzip | lzo | zstd
+    keepLast: num(env.BACKUP_KEEP_LAST, 1),
     timeoutHours: num(env.BACKUP_TIMEOUT_HOURS, 12), // batas tunggu 1 job backup
     catchupHours: num(env.BACKUP_CATCHUP_HOURS, 6), // jika bot mati saat jadwal, tetap jalan kalau telat <= x jam
     stateFile: env.BACKUP_STATE_FILE || '/app/data/backup-state.json'

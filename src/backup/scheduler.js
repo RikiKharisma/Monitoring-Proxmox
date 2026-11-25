@@ -4,7 +4,7 @@
 const { backup } = require('../config');
 const { state, load, save } = require('./state');
 const { scheduleSlot } = require('./schedule');
-const { runBackupAll } = require('./runner');
+const { runFullBackup } = require('./runner');
 
 function checkBackupSchedule() {
   if (!backup.enabled || state.running) return;
@@ -19,7 +19,7 @@ function checkBackupSchedule() {
     save();
     return;
   }
-  runBackupAll('scheduled');
+  runFullBackup('scheduled');
 }
 
 function startBackupScheduler() {

@@ -12,6 +12,12 @@ const fmtDate = (d = new Date()) =>
 
 const now = () => fmtDate();
 
+// Contoh: "Min, 29 Nov 2026 02:00"
+const fmtDateShort = (d) =>
+  d.toLocaleDateString('id-ID', { timeZone: timezone, weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' }) +
+  ' ' +
+  d.toLocaleTimeString('id-ID', { timeZone: timezone, hour: '2-digit', minute: '2-digit', hour12: false }).replace('.', ':');
+
 function formatDuration(ms) {
   const totalSec = Math.floor(ms / 1000);
   const d = Math.floor(totalSec / 86400);
@@ -45,4 +51,4 @@ function tempLevel(t) {
   return { icon: '✅', label: 'Normal' };
 }
 
-module.exports = { esc, fmtDate, now, formatDuration, bar, fmtBytes, pct, tempLevel };
+module.exports = { esc, fmtDate, fmtDateShort, now, formatDuration, bar, fmtBytes, pct, tempLevel };
