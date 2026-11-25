@@ -4,7 +4,7 @@
     "ip": "192.168.200.2",
     "url": "https://192.168.200.2:8006",
     "tokenId": "root@pam!server",
-    "tokenSecret": "2b6484ff-5080-401b-8e77-25c75d178579",
+    "tokenSecret": "",
     "backupStorage": "local"
   },
     {
@@ -12,7 +12,7 @@
     "ip": "192.168.100.2",
     "url": "https://192.168.100.2:8006",
     "tokenId": "root@pam!pc",
-    "tokenSecret": "06d2d4b5-7450-4091-b71d-06a205c10eb5",
+    "tokenSecret": "",
     "backupStorage": "local"
   }
 ]
