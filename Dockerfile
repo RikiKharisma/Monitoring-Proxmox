@@ -9,5 +9,6 @@ COPY package*.json ./
 RUN npm install --omit=dev
 
 COPY index.js servers.json ./
+COPY src ./src
 
 CMD ["npm", "start"]

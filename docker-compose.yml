@@ -10,6 +10,7 @@ services:
     volumes:
       - ./servers.json:/app/servers.json:ro
       - ./ssh:/app/ssh:ro
+      - ./data:/app/data
     logging:
       driver: "json-file"
       options:
